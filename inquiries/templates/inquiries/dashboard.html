@@ -1,0 +1,101 @@
+{% extends "base_generic.html" %}
+{% load widget_tweaks %}
+{% block title %}Inquiry Dashboard{% endblock %}
+
+{% block content %}
+ <div >
+    <h2 class="text-center">Inquiry Dashboard</h2>
+    <div class="text-right mb-4">
+        <a href="{% url 'create_inquiry' %}" class="btn btn-primary">Add Inquiry</a>
+    </div>
+    
+    
+
+    <form id="filterForm" class="mb-4 justify-content-center" method="get">
+    <div class="form-group row">
+    {% csrf_token %}
+    
+    
+    {% for field in filter_form %}
+            <div class="col-md-3">  <!-- Change to col-md-4 for 3 fields per row -->
+                <label for="{{ field.id_for_label }}">{{ field.label|title }}</label>
+                {{ field |add_class:"form-control" }}<!-- Add Bootstrap class -->
+            </div>
+            {% if forloop.counter|divisibleby:4 and not forloop.last %}  <!-- Adjust for 4 fields per row -->
+                </div><div class="row">  <!-- Close the current row and start a new one -->
+            {% endif %}
+    {% endfor %}
+           
+           
+    </div>
+        
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary" >Filter</button>
+        </div>
+        <div class="col-md-3">
+                <button type="button" class="btn btn-secondary" id="resetButton" >Reset</button>
+        </div>
+    </div>
+    </form>
+
+    <div class="table-responsive">
+        {% if inquiries %}
+          <table id="inquiryTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>City</th>
+                    <th>Inquiry Type</th>
+                    <th>Sales Person</th>
+                    <th>Sales Reference</th>
+                    <th>Status</th>
+                    <th>Travel Date</th>
+                    <th>Follow-up Date</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+         
+                </tr>
+            </thead>
+            <tbody >
+                {% if user.is_authenticated %}
+                    {% for inquiry in inquiries %}
+                        <tr class="border-b bg-red-200">
+                            <td class="py-2 px-4 border border-black text-gray-600" >{{ inquiry.id }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.customer_name }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.primary_contact }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.city }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.inquiry_type }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.sales_person }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.sales_reference }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.status }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.travel_date }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.follow_up_date }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600">{{ inquiry.created_at }}</td>
+                            <td class="py-2 px-4 border border-black text-gray-600"><a href="{% url 'inquiry_detail' inquiry.id %}">Add Remarks</a></td>
+            
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <h4>No inquiries found</h4>
+                {% endif %}
+            </tbody>
+          </table>
+    {% else %}
+        <p>No inquiries found.</p>
+    {% endif %}
+
+    </div>
+ </div>
+ <script>
+    document.getElementById('resetButton').addEventListener('click', function() {
+        document.getElementById('filterForm').reset();  // Reset the form fields
+        window.location.href = window.location.pathname;  // Optionally redirect to the same page to clear GET parameters
+    });
+    
+</script>
+
+{% endblock %}
+

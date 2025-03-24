@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    #command: gunicorn inquiry_dashboard.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/crm
+      
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=django-insecure-3n&z0l3@ip$xms42cr#yi3mis4ja+rf_((b3&5ihh9z!f-5gzz"
+      - ALLOWED_HOSTS=localhost, savvy-invoices.metalseed.io, 50.28.105.90
+      - DATABASE_NAME=inquiry_db
+      - DATABASE_USER=test_user
+      - DATABASE_PASSWORD=test
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+
+  db:
+    image: postgres:17
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=inquiry_db
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=test
+     # - POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+      
+volumes:
+  postgres_data:
+

@@ -1,0 +1,159 @@
+
+
+{% extends "base_generic.html" %}
+{% load widget_tweaks %}
+{% block title %}Create New Inquiry{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Create New Inquiry</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'create_inquiry' %}">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Customer Information -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h4 class="mb-0">Customer Information</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.customer_name.id_for_label }}" class="form-label">Customer Name</label>
+                                            {% render_field inquiry_form.customer_name class="form-control" %}
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="{{ inquiry_form.primary_contact.id_for_label }}" class="form-label">Primary Contact</label>
+                                                {% render_field inquiry_form.primary_contact class="form-control" %}
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="{{ inquiry_form.secondary_contact.id_for_label }}" class="form-label">Secondary Contact</label>
+                                                {% render_field inquiry_form.secondary_contact class="form-control" %}
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.email.id_for_label }}" class="form-label">Email</label>
+                                            {% render_field inquiry_form.email class="form-control" %}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Location Details -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h4 class="mb-0">Location Details</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.city.id_for_label }}" class="form-label">City</label>
+                                            {% render_field inquiry_form.city class="form-select" %}
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.city_area.id_for_label }}" class="form-label">City Area</label>
+                                            {% render_field inquiry_form.city_area class="form-control" %}
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.branch.id_for_label }}" class="form-label">Branch</label>
+                                            {% render_field inquiry_form.branch class="form-control" %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <!-- Dates & Type -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h4 class="mb-0">Inquiry Details</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.inquiry_type.id_for_label }}" class="form-label">Inquiry Type</label>
+                                            {% render_field inquiry_form.inquiry_type class="form-select" %}
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="{{ inquiry_form.travel_date.id_for_label }}" class="form-label">Travel Date</label>
+                                                {% render_field inquiry_form.travel_date class="form-control" %}
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="{{ inquiry_form.follow_up_date.id_for_label }}" class="form-label">Follow-up Date</label>
+                                                {% render_field inquiry_form.follow_up_date class="form-control" %}
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.status.id_for_label }}" class="form-label">Status</label>
+                                            {% render_field inquiry_form.status class="form-select" %}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sales Information -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-light">
+                                        <h4 class="mb-0">Sales Information</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.sales_person.id_for_label }}" class="form-label">Sales Person</label>
+                                            {% render_field inquiry_form.sales_person class="form-select" %}
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.sales_reference.id_for_label }}" class="form-label">Sales Reference</label>
+                                            {% render_field inquiry_form.sales_reference class="form-select" %}
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="{{ inquiry_form.campaign.id_for_label }}" class="form-label">Campaign</label>
+                                            {% render_field inquiry_form.campaign class="form-select" %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Remarks Section -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h4 class="mb-0">Initial Remarks</h4>
+                            </div>
+                            <div class="card-body">
+                                {{ remark_formset.management_form }}
+                                {% for form in remark_formset %}
+                                    <div class="mb-3">
+                                        <label for="{{ form.text.id_for_label }}" class="form-label">Remark</label>
+                                        {% render_field form.text class="form-control" rows="3" placeholder="Enter initial remarks here..." %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="{% url 'inquiry_dashboard' %}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Back to Dashboard
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-save"></i> Submit Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

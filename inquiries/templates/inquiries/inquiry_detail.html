@@ -1,0 +1,123 @@
+{% extends "base_generic.html" %}
+{% load widget_tweaks %}
+{% block title %}Inquiry Detail{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="inquiry-header">
+        <h2 class="mb-0">Inquiry #{{ inquiry.id }}: {{ inquiry.customer_name }}</h2>
+        <p class="text-muted">Created on: {{ inquiry.created_at|date:"F d, Y" }}</p>
+    </div>
+
+    <div class="row">
+        <!-- Inquiry Details -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-header bg-light">
+                    <h5 class="card-title mb-0">Inquiry Details</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-5">Customer Name:</dt>
+                        <dd class="col-sm-7">{{ inquiry.customer_name }}</dd>
+                        
+                        <dt class="col-sm-5">Contact:</dt>
+                        <dd class="col-sm-7">{{ inquiry.primary_contact }}</dd>
+                        
+                        <dt class="col-sm-5">Email:</dt>
+                        <dd class="col-sm-7">{{ inquiry.email }}</dd>
+                        
+                        <dt class="col-sm-5">City:</dt>
+                        <dd class="col-sm-7">{{ inquiry.city }}</dd>
+                        
+                        <dt class="col-sm-5">Area:</dt>
+                        <dd class="col-sm-7">{{ inquiry.city_area }}</dd>
+                        
+                        <dt class="col-sm-5">Travel Date:</dt>
+                        <dd class="col-sm-7">{{ inquiry.travel_date }}</dd>
+                        
+                        <dt class="col-sm-5">Follow-up Date:</dt>
+                        <dd class="col-sm-7">{{ inquiry.follow_up_date }}</dd>
+                        
+                        <dt class="col-sm-5">Status:</dt>
+                        <dd class="col-sm-7"><span class="badge bg-primary">{{ inquiry.status }}</span></dd>
+                        
+                        <dt class="col-sm-5">Sales Person:</dt>
+                        <dd class="col-sm-7">{{ inquiry.sales_person }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update Form -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Update Inquiry</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="{{ inquiry_form.follow_up_date.id_for_label }}" class="form-label">Follow-up Date</label>
+                                <div class="input-group">
+                                    {{ inquiry_form.follow_up_date|safe }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="{{ inquiry_form.status.id_for_label }}" class="form-label">Status</label>
+                                {{ inquiry_form.status|safe }}
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="{{ remark_form.text.id_for_label }}" class="form-label">Add New Remark</label>
+                            {{ remark_form.text|safe }}
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Previous Remarks -->
+            <div class="card mt-4">
+                <div class="card-header bg-light">
+                    <h5 class="card-title mb-0">Previous Remarks</h5>
+                </div>
+                <div class="card-body remarks-container">
+                    {% if remarks %}
+                        {% for remark in remarks %}
+                            <div class="remark-item p-3 bg-light rounded mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="fw-bold">Status: {{ remark.status_remarks }}</div>
+                                    <div class="remark-date">{{ remark.created_at|date:"F d, Y H:i" }}</div>
+                                </div>
+                                <div>{{ remark.text }}</div>
+                                <div class="d-flex justify-content-between mt-2">
+                                    <!-- <small class="text-muted">{{ remark.sales_person_remark }}</small> -->
+                                    <small class="text-muted">Follow-up: {{ remark.follow_up_date_remark }}</small>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted">No remarks yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Optional: Enhance the form elements with JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add form validation or other enhancements here
+        });
+</script>
+{% endblock %}

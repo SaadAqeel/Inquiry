@@ -1,0 +1,933 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-03-18T13:43:13.327Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Lahore",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-03-18T13:43:19.706Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Karachi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-03-18T13:43:25.321Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Islamabad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-03-18T13:43:31.566Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Multan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-03-18T13:43:38.467Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Faislabad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-03-18T13:43:43.820Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Other",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-03-18T13:45:31.340Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-03-18T13:45:40.300Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "In Progress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-03-18T13:45:54.994Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Confirm",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-03-18T13:46:05.383Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Completed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-03-18T13:46:24.292Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Quotation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-03-18T13:46:30.402Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Hold",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-03-18T13:46:37.277Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "Cancelled",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-03-18T13:47:28.028Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Facebook",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-03-18T13:47:35.316Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Instagram",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-03-18T13:47:40.429Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Web",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-03-18T13:48:01.120Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "24/7 C",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-03-18T13:48:10.603Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "24/7 W",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-03-18T13:48:27.171Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "PTCL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-03-18T13:49:37.920Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "HAJJ 1446",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-03-18T13:49:56.570Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "20 Days Ramadan Umrah Last Ashra In Makkah",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-03-18T13:50:07.453Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Arpil Umrah Packages",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-03-18T13:50:56.547Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Ramzan Umrah",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-03-18T13:51:09.018Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Umrah",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-03-18T13:51:18.788Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "International-TKT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-03-18T13:51:31.152Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Domestic - TKT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-03-18T13:51:47.193Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Domestic - Tour",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-03-18T13:52:00.058Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "International Tour",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-03-18T13:52:14.621Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "KSA VISA ONLY",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-03-18T13:52:27.262Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "International Visa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-03-18T13:52:38.795Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Hajj",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-03-18T13:52:53.284Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Umrah+Tour",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-03-18T18:08:15.821Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "Remark for Qasim on 2025-03-18",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sales person remark\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-03-18T18:09:30.685Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Remark for Ali on 2025-03-18",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sales person remark\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$s2duoV3JKOdXsmXl9rFzwG$E9VWtaeul7GL5PsBdhBmspbS765tQ4YrdeWbW7LCNqA=",
+    "last_login": "2025-03-18T17:48:32.778Z",
+    "is_superuser": true,
+    "username": "saad",
+    "first_name": "",
+    "last_name": "",
+    "email": "saad@email.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-18T13:19:54.264Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$AGkHuAwwOBahCOjBSwEzdX$EwHpOy8D9ldSW9Xkfoxdizlciv5wyZ3sIxJfanzp680=",
+    "last_login": "2025-03-18T15:45:19.189Z",
+    "is_superuser": false,
+    "username": "usman123",
+    "first_name": "",
+    "last_name": "",
+    "email": "usman@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-18T15:39:19.917Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6jjfrcfss0ngvuclg2n5qjdkhf6z651p",
+  "fields": {
+    "session_data": ".eJxVj8FOwzAMQP_F5ypKsrZJe-TOFyBUObZHAyyZmlSApv07C-yym-X3_CRfAInynuqCe10l1UhYY07LSeqaucD8coH_GWY4YylfeWPoACvMxvX2YKybvBqMd37oYC-yJTzJTS6IDNfXDv7SSyNLbBUDD7uA9CGpAX7H9JYV5VS3GFRT1J0W9ZxZPp_u7kNgxbLerkMwni2SdSMxO_GDIdZm9GzQ6sGbY8CjHsUGN1mxh9BT6KdApJlsz75Fi5TSvpfvc9x-YNbXX7deYFU:1tuZ9K:m9IJ5xGt6gYP8QiC9SuaBWuHBqdE-KoAPmtZrXYDDVs",
+    "expire_date": "2025-04-01T15:46:38.549Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f2zhvzwbfa0mxwew6xvhhmt1p0kjtt2z",
+  "fields": {
+    "session_data": ".eJxVj8FuwyAMQP_F5ygCSoHmuPu-YJoiY7sL2wpVINqmqv--svXSm-X3_CRfAInKltuMW1skt0TYUsnzSdpSuML0coH_GSY4Y61fZWUYABtM2luzM0prM3rntHV2gK3KmvEkN7siMlxfB_hrz53MqWc0POwi0ofkDvgd81sZqeS2pjh2ZbzTOj4Xls-nu_sQWLAut-sYdWCDZLwjZi9hr4mVdoE1GrUP-hjxqJyY6A9GzC5aivYQiRSTsRx6tEqt_X35Pqf1ByZ1_QXnAGBw:1tub3I:YBX6o41QTFO-xW3bof0sr-RHLO2kptlRoRcjLA3162c",
+    "expire_date": "2025-04-01T17:48:32.794Z"
+  }
+},
+{
+  "model": "inquiries.city",
+  "pk": 1,
+  "fields": {
+    "name": "Lahore"
+  }
+},
+{
+  "model": "inquiries.city",
+  "pk": 2,
+  "fields": {
+    "name": "Karachi"
+  }
+},
+{
+  "model": "inquiries.city",
+  "pk": 3,
+  "fields": {
+    "name": "Islamabad"
+  }
+},
+{
+  "model": "inquiries.city",
+  "pk": 4,
+  "fields": {
+    "name": "Multan"
+  }
+},
+{
+  "model": "inquiries.city",
+  "pk": 5,
+  "fields": {
+    "name": "Faislabad"
+  }
+},
+{
+  "model": "inquiries.city",
+  "pk": 6,
+  "fields": {
+    "name": "Other"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 1,
+  "fields": {
+    "name": "Ramzan Umrah"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 2,
+  "fields": {
+    "name": "Umrah"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 3,
+  "fields": {
+    "name": "International-TKT"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 4,
+  "fields": {
+    "name": "Domestic - TKT"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 5,
+  "fields": {
+    "name": "Domestic - Tour"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 6,
+  "fields": {
+    "name": "International Tour"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 7,
+  "fields": {
+    "name": "KSA VISA ONLY"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 8,
+  "fields": {
+    "name": "International Visa"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 9,
+  "fields": {
+    "name": "Hajj"
+  }
+},
+{
+  "model": "inquiries.inquirytype",
+  "pk": 10,
+  "fields": {
+    "name": "Umrah+Tour"
+  }
+},
+{
+  "model": "inquiries.salesreference",
+  "pk": 1,
+  "fields": {
+    "name": "Facebook"
+  }
+},
+{
+  "model": "inquiries.salesreference",
+  "pk": 2,
+  "fields": {
+    "name": "Instagram"
+  }
+},
+{
+  "model": "inquiries.salesreference",
+  "pk": 3,
+  "fields": {
+    "name": "Web"
+  }
+},
+{
+  "model": "inquiries.salesreference",
+  "pk": 4,
+  "fields": {
+    "name": "24/7 C"
+  }
+},
+{
+  "model": "inquiries.salesreference",
+  "pk": 5,
+  "fields": {
+    "name": "24/7 W"
+  }
+},
+{
+  "model": "inquiries.salesreference",
+  "pk": 6,
+  "fields": {
+    "name": "PTCL"
+  }
+},
+{
+  "model": "inquiries.campaign",
+  "pk": 1,
+  "fields": {
+    "name": "HAJJ 1446"
+  }
+},
+{
+  "model": "inquiries.campaign",
+  "pk": 2,
+  "fields": {
+    "name": "20 Days Ramadan Umrah Last Ashra In Makkah"
+  }
+},
+{
+  "model": "inquiries.campaign",
+  "pk": 3,
+  "fields": {
+    "name": "Arpil Umrah Packages"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 1,
+  "fields": {
+    "name": "Open"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 2,
+  "fields": {
+    "name": "In Progress"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 3,
+  "fields": {
+    "name": "Confirm"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 4,
+  "fields": {
+    "name": "Completed"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 5,
+  "fields": {
+    "name": "Quotation"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 6,
+  "fields": {
+    "name": "Hold"
+  }
+},
+{
+  "model": "inquiries.status",
+  "pk": 7,
+  "fields": {
+    "name": "Cancelled"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 1,
+  "fields": {
+    "customer_name": "Ali",
+    "primary_contact": "1234",
+    "secondary_contact": "4321",
+    "email": "ali@email.com",
+    "city": 1,
+    "city_area": "DHA",
+    "travel_date": "2025-03-21",
+    "follow_up_date": "2025-03-27",
+    "inquiry_type": 8,
+    "branch": "Lhr",
+    "sales_person": 1,
+    "sales_reference": 3,
+    "campaign": 2,
+    "status": 2,
+    "created_at": "2025-03-18T13:54:56.890Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 2,
+  "fields": {
+    "customer_name": "Qasim",
+    "primary_contact": "998877",
+    "secondary_contact": "665544",
+    "email": "qasim@gmail.com",
+    "city": 5,
+    "city_area": "L",
+    "travel_date": "2025-03-31",
+    "follow_up_date": "2025-03-22",
+    "inquiry_type": 2,
+    "branch": "main branch",
+    "sales_person": 2,
+    "sales_reference": 6,
+    "campaign": 3,
+    "status": 3,
+    "created_at": "2025-03-18T15:59:31.923Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 3,
+  "fields": {
+    "customer_name": "Ruman",
+    "primary_contact": "01010",
+    "secondary_contact": "10101",
+    "email": "ruman@gmail.com",
+    "city": 1,
+    "city_area": "super town",
+    "travel_date": "2025-04-03",
+    "follow_up_date": "2025-03-20",
+    "inquiry_type": 6,
+    "branch": "like",
+    "sales_person": 2,
+    "sales_reference": 5,
+    "campaign": 2,
+    "status": 3,
+    "created_at": "2025-03-18T19:22:02.429Z"
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 1,
+  "fields": {
+    "inquiry": 1,
+    "text": "A person want more details.",
+    "created_at": "2025-03-18T13:54:56.904Z",
+    "status_remarks": 1,
+    "follow_up_date_remark": "2025-03-20",
+    "sales_person_remark": 1
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 2,
+  "fields": {
+    "inquiry": 1,
+    "text": "New Remarks added",
+    "created_at": "2025-03-18T15:17:40.185Z",
+    "status_remarks": 2,
+    "follow_up_date_remark": "2025-03-22",
+    "sales_person_remark": 1
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 3,
+  "fields": {
+    "inquiry": 1,
+    "text": "wow, it look so nice",
+    "created_at": "2025-03-18T15:30:06.089Z",
+    "status_remarks": 3,
+    "follow_up_date_remark": "2025-03-23",
+    "sales_person_remark": 1
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 4,
+  "fields": {
+    "inquiry": 1,
+    "text": "testing",
+    "created_at": "2025-03-18T15:45:45.039Z",
+    "status_remarks": 5,
+    "follow_up_date_remark": "2025-03-26",
+    "sales_person_remark": 1
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 5,
+  "fields": {
+    "inquiry": 2,
+    "text": "i want details of Umrah package",
+    "created_at": "2025-03-18T15:59:31.937Z",
+    "status_remarks": 1,
+    "follow_up_date_remark": "2025-03-25",
+    "sales_person_remark": 2
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 6,
+  "fields": {
+    "inquiry": 2,
+    "text": "hellow",
+    "created_at": "2025-03-18T16:00:16.940Z",
+    "status_remarks": 2,
+    "follow_up_date_remark": "2025-03-21",
+    "sales_person_remark": 2
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 7,
+  "fields": {
+    "inquiry": 1,
+    "text": "done",
+    "created_at": "2025-03-18T16:02:53.169Z",
+    "status_remarks": 4,
+    "follow_up_date_remark": "2025-03-27",
+    "sales_person_remark": 1
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 8,
+  "fields": {
+    "inquiry": 2,
+    "text": "okay",
+    "created_at": "2025-03-18T16:06:28.890Z",
+    "status_remarks": 3,
+    "follow_up_date_remark": "2025-03-22",
+    "sales_person_remark": 2
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 9,
+  "fields": {
+    "inquiry": 1,
+    "text": "y",
+    "created_at": "2025-03-18T17:58:23.506Z",
+    "status_remarks": 2,
+    "follow_up_date_remark": "2025-03-27",
+    "sales_person_remark": 1
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 10,
+  "fields": {
+    "inquiry": 3,
+    "text": "hellow remarks testing",
+    "created_at": "2025-03-18T19:22:02.440Z",
+    "status_remarks": 5,
+    "follow_up_date_remark": "2025-03-27",
+    "sales_person_remark": 2
+  }
+},
+{
+  "model": "inquiries.remark",
+  "pk": 11,
+  "fields": {
+    "inquiry": 3,
+    "text": "new testing",
+    "created_at": "2025-03-18T19:22:42.338Z",
+    "status_remarks": 3,
+    "follow_up_date_remark": "2025-03-20",
+    "sales_person_remark": 2
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "email": "usman@gmail.com",
+    "verified": false,
+    "primary": true
+  }
+}
+]
