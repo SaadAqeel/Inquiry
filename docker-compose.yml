@@ -4,34 +4,29 @@ services:
   web:
     build: .
     
-    command: gunicorn inquiry_dashboard.wsgi:application --bind 0.0.0.0:8000
-    volumes:
-      - .:/crm
+    #command: gunicorn inquiry_dashboard.wsgi:application --bind 0.0.0.0:8000
+    
     ports:
       - 8000:8000
     depends_on:
       - db
-    environment:
-      - DEBUG=False
-      - SECRET_KEY=django-insecure-3n&z0l3@ip$xms42cr#yi3mis4ja+rf_((b3&5ihh9z!f-5gzz"
-      - ALLOWED_HOSTS=localhost,127.0.0.1,50.28.105.90
-      - DATABASE_NAME=inquiry_db
-      - DATABASE_USER=test_user
-      - DATABASE_PASSWORD=test
-      - DATABASE_HOST=db
-      - DATABASE_PORT=5432
+    env_file:
+      - .env
+    volumes:
+      - static_volume:/app/staticfiles
 
   db:
     image: postgres:17
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_DB=inquiry_db
-      - POSTGRES_USER=test_user
-      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
      # - POSTGRES_HOST_AUTH_METHOD: trust
     
       
 volumes:
   postgres_data:
+  static_volume:
 
