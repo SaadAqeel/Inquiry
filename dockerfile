@@ -7,7 +7,8 @@ FROM python:3.13.1
 #ENV PYTHONUNBUFFERED=1
 
 # Set work directory
-WORKDIR /crm
+WORKDIR /Inquiry
+
 
 # Install dependencies
 
@@ -18,10 +19,6 @@ RUN pip install -r requirements.txt
 # Copy project
 COPY . .
 
-
-
-
 EXPOSE 8000
-
 
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "inquiry_dashboard.wsgi:application", "--workers", "3"]

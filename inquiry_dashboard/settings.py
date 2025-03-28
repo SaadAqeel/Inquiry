@@ -49,8 +49,11 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "inquiries.middleware.SeparateAdminSessionMiddleware",
+    # Other middleware...
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.middleware.common.CommonMiddleware",
-    # "django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -58,7 +61,11 @@ MIDDLEWARE = [
     "django.contrib.sites.middleware.CurrentSiteMiddleware",
 ]
 
+SESSION_COOKIE_NAME = "sessionid"  # Default web session
+ADMIN_SESSION_COOKIE_NAME = "admin_sessionid"  # Separate admin session
+
 ROOT_URLCONF = "inquiry_dashboard.urls"
+
 
 TEMPLATES = [
     {
@@ -151,4 +158,10 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+ACCOUNT_SESSION_REPLACE_ON_LOGIN = False  # Prevent automatic session replacement
+
+# Optionally, to further control session behavior
+SESSION_COOKIE_SAMESITE = "Lax"  # Or 'Strict' depending on your security requirements
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
